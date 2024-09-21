@@ -8,6 +8,7 @@
 # Calculator -- a four function calculator commandline tool
 
 import sys
+import math
 
 # -------------------------------------------------------- #
 # -- CALCULATOR FUNCTIONS -------------------------------- #
@@ -42,6 +43,14 @@ def div(a, b):
 # b -- exponent
 def power(a, b):
     return a ** b
+
+# Log function
+# base -- log base
+# x -- number to calculate log of
+def log(base, x):
+    return math.log(x, base)
+
+
 
 
 
@@ -80,6 +89,8 @@ while (True):
             print ("Quotient: ", div(a, b))
         elif (op == "^"):
             print("Power: ", power(a, b))
+        elif (op == "log"):
+            print("Log: ", log(a, b))  # a는 밑, b는 숫자
         else:
             print ("Invalid operation...")
 
